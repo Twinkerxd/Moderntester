@@ -37,4 +37,13 @@ public class BaseSeleniumTests {
         Actions actions = new Actions(driver);
         actions.moveToElement(webElement).perform();
     }
+
+    public static boolean isDisplayed(WebElement webElement) {
+        try {
+            webElement.isDisplayed();
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
 }

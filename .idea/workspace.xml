@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="New project!">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/IframePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/AllTests.java" afterDir="false" />
+    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added iframe test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/TablePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AllTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
     "ToolWindowRun.ShowToolbar": "false"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AllTests.tables">
     <configuration name="AllTests.newTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
@@ -57,8 +56,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AllTests.tables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AllTests" />
+      <option name="METHOD_NAME" value="tables" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AllTests.tables" />
         <item itemvalue="JUnit.AllTests.newTest" />
       </list>
     </recent_temporary>
@@ -72,6 +88,29 @@
       <option name="presentableId" value="Default" />
       <updated>1657011049041</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added iframe test">
+      <created>1657021747698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657021747698</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added iframe test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added iframe test" />
   </component>
 </project>

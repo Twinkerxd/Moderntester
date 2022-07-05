@@ -3,12 +3,14 @@ package Tests;
 import Core.BaseSeleniumTests;
 import Pages.IframePage;
 import Pages.MainPage;
+import Pages.TablePage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class AllTests extends BaseSeleniumTests {
     private MainPage mainPage;
     private IframePage iframePage;
+    private TablePage tablePage;
 
     @Test
     @DisplayName("iframes")
@@ -32,4 +34,8 @@ public class AllTests extends BaseSeleniumTests {
         mainPage.basicItemClick();
     }
 
+    @Test
+    public void tables() {
+        tablePage = new MainPage().getTablePage();
+    }
 }

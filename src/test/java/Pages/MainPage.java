@@ -13,6 +13,9 @@ public class MainPage extends BaseSeleniumPage {
     @FindBy(xpath = "//a[@id='iframes-item']")
     private WebElement iframesItem;
 
+    @FindBy(xpath = "//a[@id='table-item']")
+    private WebElement tableItem;
+
     public MainPage() {
         PageFactory.initElements(driver,this);
     }
@@ -27,7 +30,9 @@ public class MainPage extends BaseSeleniumPage {
         basicItem.click();
     }
 
-    public WebElement getBasicItem() {
-        return basicItem;
+    public TablePage getTablePage() {
+        mouseOver(basicItem);
+        tableItem.click();
+        return new TablePage();
     }
 }
