@@ -3,6 +3,7 @@ package Core;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,12 +39,17 @@ public class BaseSeleniumTests {
         actions.moveToElement(webElement).perform();
     }
 
-    public static boolean isDisplayed(WebElement webElement) {
+    public boolean isDisplayed(WebElement webElement) {
         try {
             webElement.isDisplayed();
             return true;
         } catch (org.openqa.selenium.NoSuchElementException e) {
             return false;
         }
+    }
+
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }
