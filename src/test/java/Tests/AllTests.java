@@ -37,5 +37,6 @@ public class AllTests extends BaseSeleniumTests {
     @Test
     public void tables() {
         tablePage = new MainPage().getTablePage();
+        tablePage.someMethod();
     }
 }
