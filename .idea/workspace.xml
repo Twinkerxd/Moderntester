@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Table practise test">
-      <change afterPath="$PROJECT_DIR$/src/Kappa.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/FormPage.java" afterDir="false" />
+    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added form test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/AlertsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AllTests.java" afterDir="false" />
     </list>
@@ -48,8 +46,8 @@
       <recent name="C:\Junk\Projects\Moderntester\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllTests.form">
-    <configuration name="AllTests.form" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AllTests.promptAlertBoxAccept">
+    <configuration name="AllTests.delayedAlert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
         <pattern>
@@ -59,13 +57,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AllTests" />
-      <option name="METHOD_NAME" value="form" />
+      <option name="METHOD_NAME" value="delayedAlert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AllTests.newTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllTests.promptAlertBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
         <pattern>
@@ -75,13 +73,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AllTests" />
-      <option name="METHOD_NAME" value="newTest" />
+      <option name="METHOD_NAME" value="promptAlertBox" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AllTests.tables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllTests.promptAlertBoxAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
         <pattern>
@@ -91,7 +89,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AllTests" />
-      <option name="METHOD_NAME" value="tables" />
+      <option name="METHOD_NAME" value="promptAlertBoxAccept" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllTests.promptAlertBoxDismiss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AllTests" />
+      <option name="METHOD_NAME" value="promptAlertBoxDismiss" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllTests.simpleAlertPopUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AllTests" />
+      <option name="METHOD_NAME" value="simpleAlertPopUp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,9 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AllTests.form" />
-        <item itemvalue="JUnit.AllTests.tables" />
-        <item itemvalue="JUnit.AllTests.newTest" />
+        <item itemvalue="JUnit.AllTests.promptAlertBoxAccept" />
+        <item itemvalue="JUnit.AllTests.delayedAlert" />
+        <item itemvalue="JUnit.AllTests.promptAlertBoxDismiss" />
+        <item itemvalue="JUnit.AllTests.promptAlertBox" />
+        <item itemvalue="JUnit.AllTests.simpleAlertPopUp" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657095996120</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added form test">
+      <created>1657106806461</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657106806461</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +192,7 @@
     <MESSAGE value="Added iframe test" />
     <MESSAGE value="Table" />
     <MESSAGE value="Table practise test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Table practise test" />
+    <MESSAGE value="Added form test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added form test" />
   </component>
 </project>

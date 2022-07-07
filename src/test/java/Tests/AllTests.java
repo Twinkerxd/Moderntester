@@ -1,21 +1,17 @@
 package Tests;
 
 import Core.BaseSeleniumTests;
-import Pages.FormPage;
-import Pages.IframePage;
-import Pages.MainPage;
-import Pages.TablePage;
+import Pages.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
 
 public class AllTests extends BaseSeleniumTests {
     private MainPage mainPage;
     private IframePage iframePage;
     private TablePage tablePage;
     private FormPage formPage;
+    private AlertsPage alertsPage;
 
     @Test
     @DisplayName("iframes")
@@ -62,5 +58,54 @@ public class AllTests extends BaseSeleniumTests {
         formPage.clickSignInButton();
         Assertions.assertEquals("Form send with success",formPage.getValidatorMessage());
         Thread.sleep(2000);
+    }
+
+    @Test
+    public void simpleAlertPopUp() {
+        alertsPage = new MainPage().getAlertsPage();
+        alertsPage.clickSimpleAlertButton();
+        alertsPage.waitForAlertToBeReady().accept();
+        Assertions.assertEquals("OK button pressed", alertsPage.getSimpleAlertLabel());
+    }
+
+    @Test
+    public void promptAlertBoxAccept() {
+        alertsPage = new MainPage().getAlertsPage();
+        alertsPage.clickPromptAlertButton();
+        alertsPage.waitForAlertToBeReady().sendKeys("Nothing");
+        alertsPage.waitForAlertToBeReady().accept();
+        Assertions.assertEquals("Hello Nothing! How are you today?",alertsPage.getPromptLabel());
+    }
+
+    @Test
+    public void promptAlertBoxDismiss() {
+        alertsPage = new MainPage().getAlertsPage();
+        alertsPage.clickPromptAlertButton();
+        alertsPage.waitForAlertToBeReady().dismiss();
+        Assertions.assertEquals("User cancelled the prompt.",alertsPage.getPromptLabel());
+    }
+
+    @Test
+    public void confirmPopUpAccept() {
+        alertsPage = new MainPage().getAlertsPage();
+        alertsPage.clickConfirmPopUpButton();
+        alertsPage.waitForAlertToBeReady().accept();
+        Assertions.assertEquals("You pressed OK!",alertsPage.getConfirmLabel());
+    }
+
+    @Test
+    public void confirmPopUpDismiss() {
+        alertsPage = new MainPage().getAlertsPage();
+        alertsPage.clickConfirmPopUpButton();
+        alertsPage.waitForAlertToBeReady().dismiss();
+        Assertions.assertEquals("You pressed Cancel!",alertsPage.getConfirmLabel());
+    }
+
+    @Test
+    public void delayedAlert() {
+        alertsPage = new MainPage().getAlertsPage();
+        alertsPage.clickDelayedAlert();
+        alertsPage.waitForAlertToBeReady().accept();
+        Assertions.assertEquals("OK button pressed", alertsPage.getDelayedAlertLabel());
     }
 }

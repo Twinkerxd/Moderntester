@@ -19,6 +19,9 @@ public class MainPage extends BaseSeleniumPage {
     @FindBy(xpath = "//a[@id='form-item']")
     private WebElement formItem;
 
+    @FindBy(xpath = "//a[@id='alerts-item']")
+    private WebElement alertsItem;
+
     public MainPage() {
         PageFactory.initElements(driver,this);
     }
@@ -43,5 +46,11 @@ public class MainPage extends BaseSeleniumPage {
         mouseOver(basicItem);
         formItem.click();
         return new FormPage();
+    }
+
+    public AlertsPage getAlertsPage() {
+        mouseOver(basicItem);
+        alertsItem.click();
+        return new AlertsPage();
     }
 }
