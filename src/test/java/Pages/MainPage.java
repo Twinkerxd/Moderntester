@@ -22,6 +22,9 @@ public class MainPage extends BaseSeleniumPage {
     @FindBy(xpath = "//a[@id='alerts-item']")
     private WebElement alertsItem;
 
+    @FindBy(xpath = "//a[@id='windows-tabs-item']")
+    private WebElement windowsItem;
+
     public MainPage() {
         PageFactory.initElements(driver,this);
     }
@@ -52,5 +55,11 @@ public class MainPage extends BaseSeleniumPage {
         mouseOver(basicItem);
         alertsItem.click();
         return new AlertsPage();
+    }
+
+    public WindowsPage getWindowsPage() {
+        mouseOver(basicItem);
+        windowsItem.click();
+        return new WindowsPage();
     }
 }

@@ -6,12 +6,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class AllTests extends BaseSeleniumTests {
+public class Basic extends BaseSeleniumTests {
     private MainPage mainPage;
     private IframePage iframePage;
     private TablePage tablePage;
     private FormPage formPage;
     private AlertsPage alertsPage;
+    private WindowsPage windowsPage;
 
     @Test
     @DisplayName("iframes")
@@ -107,5 +108,30 @@ public class AllTests extends BaseSeleniumTests {
         alertsPage.clickDelayedAlert();
         alertsPage.waitForAlertToBeReady().accept();
         Assertions.assertEquals("OK button pressed", alertsPage.getDelayedAlertLabel());
+    }
+
+    @Test
+    public void newWindow() {
+        windowsPage = new MainPage().getWindowsPage();
+        windowsPage.clickWindowButton();
+        windowsPage.switchToNewWindowOrTab();
+        Assertions.assertEquals("http://automation-practice.emilos.pl/",windowsPage.getCurrentUrl());
+    }
+
+    @Test
+    public void newMessageWindow() {
+        windowsPage = new MainPage().getWindowsPage();
+        windowsPage.clickMessageButton();
+        windowsPage.switchToNewWindowOrTab();
+        Assertions.assertEquals("Knowledge increases by sharing but not by saving. Please share this website " +
+                "with your friends and in your organization.",windowsPage.getBody());
+        System.out.println(windowsPage.getBody());
+    }
+
+    @Test
+    public void newTab() {
+        windowsPage = new MainPage().getWindowsPage();
+        windowsPage.clickTabButton();
+        windowsPage.switchToNewWindowOrTab();
     }
 }
