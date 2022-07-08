@@ -3,6 +3,7 @@ package Pages.Basic;
 import Core.BaseSeleniumPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class BasicMenu extends BaseSeleniumPage {
     @FindBy(xpath = "//a[@id='iframes-item']")
@@ -19,6 +20,10 @@ public class BasicMenu extends BaseSeleniumPage {
 
     @FindBy(xpath = "//a[@id='windows-tabs-item']")
     private WebElement windowsItem;
+
+    public BasicMenu() {
+        PageFactory.initElements(driver,this);
+    }
 
     public IframePage getIframePage() {
         iframesItem.click();

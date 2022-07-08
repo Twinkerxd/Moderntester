@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Omg refactoring and added autocomplete test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/DataPickerPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/ToolTipPage.java" afterDir="false" />
+    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added tooltip and datapicker tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Core/BaseSeleniumTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Basic/BasicMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/BasicMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BasicTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +43,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Junk\Projects\Moderntester\src\main\resources" />
       <recent name="C:\Junk\Projects\Moderntester\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WidgetsTests.toolTip">
-    <configuration name="BasicTest.newTab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BasicTest.debug">
+    <configuration name="BasicTest.debug" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
         <pattern>
@@ -58,13 +58,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="newTab" />
+      <option name="METHOD_NAME" value="debug" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WidgetsTests.Accordion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicTest.promptAlertBoxAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
         <pattern>
@@ -73,8 +73,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
-      <option name="METHOD_NAME" value="Accordion" />
+      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
+      <option name="METHOD_NAME" value="promptAlertBoxAccept" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicTest.promptAlertBoxDismiss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
+      <option name="METHOD_NAME" value="promptAlertBoxDismiss" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicTest.simpleAlertPopUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
+      <option name="METHOD_NAME" value="simpleAlertPopUp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,45 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WidgetsTests.datePicker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
-      <option name="METHOD_NAME" value="datePicker" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WidgetsTests.toolTip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
-      <option name="METHOD_NAME" value="toolTip" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WidgetsTests.toolTip" />
-        <item itemvalue="JUnit.WidgetsTests.datePicker" />
+        <item itemvalue="JUnit.BasicTest.debug" />
+        <item itemvalue="JUnit.BasicTest.promptAlertBoxDismiss" />
+        <item itemvalue="JUnit.BasicTest.promptAlertBoxAccept" />
+        <item itemvalue="JUnit.BasicTest.simpleAlertPopUp" />
         <item itemvalue="JUnit.WidgetsTests.autoComplete" />
-        <item itemvalue="JUnit.WidgetsTests.Accordion" />
-        <item itemvalue="JUnit.BasicTest.newTab" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657262139904</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added tooltip and datapicker tests">
+      <created>1657264292369</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657264292369</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +225,7 @@
     <MESSAGE value="Added alerts tests" />
     <MESSAGE value="Added new windows tests" />
     <MESSAGE value="Omg refactoring and added autocomplete test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Omg refactoring and added autocomplete test" />
+    <MESSAGE value="Added tooltip and datapicker tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tooltip and datapicker tests" />
   </component>
 </project>
