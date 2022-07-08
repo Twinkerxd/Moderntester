@@ -1,4 +1,4 @@
-package Pages;
+package Pages.Basic;
 
 import Core.BaseSeleniumPage;
 import org.openqa.selenium.Keys;

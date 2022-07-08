@@ -2,12 +2,13 @@ package Tests;
 
 import Core.BaseSeleniumTests;
 import Pages.*;
+import Pages.Basic.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class Basic extends BaseSeleniumTests {
-    private MainPage mainPage;
+public class BasicTest extends BaseSeleniumTests {
+    private MainMenu mainMenu;
     private IframePage iframePage;
     private TablePage tablePage;
     private FormPage formPage;
@@ -17,8 +18,8 @@ public class Basic extends BaseSeleniumTests {
     @Test
     @DisplayName("iframes")
     public void iframe() {
-        mainPage = new MainPage();
-        iframePage = new MainPage().getIframePage();
+        mainMenu = new MainMenu();
+        iframePage = new MainMenu().getBasicMenu().getIframePage();
 
         iframePage.switchToFrame(1);
         iframePage.setFirstNameInput("Michał");
@@ -33,18 +34,17 @@ public class Basic extends BaseSeleniumTests {
         iframePage.setYearOfExp();
 
         iframePage.switchToFrame(0);
-        mainPage.basicItemClick();
     }
 
     @Test
     public void tables() {
-        tablePage = new MainPage().getTablePage();
+        tablePage = new MainMenu().getBasicMenu().getTablePage();
         tablePage.someMethod();
     }
 
     @Test
     public void form() throws InterruptedException {
-        formPage = new MainPage().getFormPage();
+        formPage = new MainMenu().getBasicMenu().getFormPage();
         formPage.setFirstName("Serega");
         formPage.setLastName("Kekman");
         formPage.setEmail("GrayFaceNoSpace@gmail.com");
@@ -63,7 +63,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void simpleAlertPopUp() {
-        alertsPage = new MainPage().getAlertsPage();
+        alertsPage = new MainMenu().getBasicMenu().getAlertsPage();
         alertsPage.clickSimpleAlertButton();
         alertsPage.waitForAlertToBeReady().accept();
         Assertions.assertEquals("OK button pressed", alertsPage.getSimpleAlertLabel());
@@ -71,7 +71,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void promptAlertBoxAccept() {
-        alertsPage = new MainPage().getAlertsPage();
+        alertsPage = new MainMenu().getBasicMenu().getAlertsPage();
         alertsPage.clickPromptAlertButton();
         alertsPage.waitForAlertToBeReady().sendKeys("Nothing");
         alertsPage.waitForAlertToBeReady().accept();
@@ -80,7 +80,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void promptAlertBoxDismiss() {
-        alertsPage = new MainPage().getAlertsPage();
+        alertsPage = new MainMenu().getBasicMenu().getAlertsPage();
         alertsPage.clickPromptAlertButton();
         alertsPage.waitForAlertToBeReady().dismiss();
         Assertions.assertEquals("User cancelled the prompt.",alertsPage.getPromptLabel());
@@ -88,7 +88,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void confirmPopUpAccept() {
-        alertsPage = new MainPage().getAlertsPage();
+        alertsPage = new MainMenu().getBasicMenu().getAlertsPage();
         alertsPage.clickConfirmPopUpButton();
         alertsPage.waitForAlertToBeReady().accept();
         Assertions.assertEquals("You pressed OK!",alertsPage.getConfirmLabel());
@@ -96,7 +96,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void confirmPopUpDismiss() {
-        alertsPage = new MainPage().getAlertsPage();
+        alertsPage = new MainMenu().getBasicMenu().getAlertsPage();
         alertsPage.clickConfirmPopUpButton();
         alertsPage.waitForAlertToBeReady().dismiss();
         Assertions.assertEquals("You pressed Cancel!",alertsPage.getConfirmLabel());
@@ -104,7 +104,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void delayedAlert() {
-        alertsPage = new MainPage().getAlertsPage();
+        alertsPage = new MainMenu().getBasicMenu().getAlertsPage();
         alertsPage.clickDelayedAlert();
         alertsPage.waitForAlertToBeReady().accept();
         Assertions.assertEquals("OK button pressed", alertsPage.getDelayedAlertLabel());
@@ -112,7 +112,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void newWindow() {
-        windowsPage = new MainPage().getWindowsPage();
+        windowsPage = new MainMenu().getBasicMenu().getWindowsPage();
         windowsPage.clickWindowButton();
         windowsPage.switchToNewWindowOrTab();
         Assertions.assertEquals("http://automation-practice.emilos.pl/",windowsPage.getCurrentUrl());
@@ -120,7 +120,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void newMessageWindow() {
-        windowsPage = new MainPage().getWindowsPage();
+        windowsPage = new MainMenu().getBasicMenu().getWindowsPage();
         windowsPage.clickMessageButton();
         windowsPage.switchToNewWindowOrTab();
         Assertions.assertEquals("Knowledge increases by sharing but not by saving. Please share this website " +
@@ -130,7 +130,7 @@ public class Basic extends BaseSeleniumTests {
 
     @Test
     public void newTab() {
-        windowsPage = new MainPage().getWindowsPage();
+        windowsPage = new MainMenu().getBasicMenu().getWindowsPage();
         windowsPage.clickTabButton();
         windowsPage.switchToNewWindowOrTab();
     }
