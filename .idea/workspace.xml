@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added new windows tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/BasicMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/AccordionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/AutoCompletePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" afterDir="false" />
+    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Omg refactoring and added autocomplete test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/DataPickerPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/ToolTipPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AlertsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/AlertsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/FormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/FormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/IframePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/IframePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/TablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/TablePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/WindowsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/WindowsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,23 +47,7 @@
       <recent name="C:\Junk\Projects\Moderntester\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WidgetsTests.autoComplete">
-    <configuration name="BasicTest.newMessageWindow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="newMessageWindow" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.WidgetsTests.toolTip">
     <configuration name="BasicTest.newTab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
@@ -85,22 +59,6 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
       <option name="METHOD_NAME" value="newTab" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BasicTest.newTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="newTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,13 +96,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WidgetsTests.datePicker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="datePicker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests.toolTip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="toolTip" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WidgetsTests.toolTip" />
+        <item itemvalue="JUnit.WidgetsTests.datePicker" />
         <item itemvalue="JUnit.WidgetsTests.autoComplete" />
         <item itemvalue="JUnit.WidgetsTests.Accordion" />
         <item itemvalue="JUnit.BasicTest.newTab" />
-        <item itemvalue="JUnit.BasicTest.newMessageWindow" />
-        <item itemvalue="JUnit.BasicTest.newTest" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657197856347</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Omg refactoring and added autocomplete test">
+      <created>1657262139904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657262139904</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +217,7 @@
     <MESSAGE value="Added form test" />
     <MESSAGE value="Added alerts tests" />
     <MESSAGE value="Added new windows tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new windows tests" />
+    <MESSAGE value="Omg refactoring and added autocomplete test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Omg refactoring and added autocomplete test" />
   </component>
 </project>

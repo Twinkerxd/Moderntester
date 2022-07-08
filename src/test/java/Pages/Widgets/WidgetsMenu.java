@@ -13,7 +13,7 @@ public class WidgetsMenu extends BaseSeleniumPage {
     private WebElement autocompleteItem;
 
     @FindBy(id = "datepicker-item")
-    private WebElement datepickerItem;
+    private WebElement datePickerItem;
 
     @FindBy(id = "menu-item")
     private WebElement menuItem;
@@ -25,7 +25,7 @@ public class WidgetsMenu extends BaseSeleniumPage {
     private WebElement progressbarItem;
 
     @FindBy(id = "selectmenu-item")
-    private WebElement selectmenuItem;
+    private WebElement selectMenuItem;
 
     @FindBy(id = "slider-item")
     private WebElement sliderItem;
@@ -51,5 +51,15 @@ public class WidgetsMenu extends BaseSeleniumPage {
     public AutoCompletePage getAutoCompletePage() {
         autocompleteItem.click();
         return new AutoCompletePage();
+    }
+
+    public DataPickerPage getDataPickerPage() {
+        datePickerItem.click();
+        return new DataPickerPage();
+    }
+
+    public ToolTipPage getToolTipPage() {
+        tooltipItem.click();
+        return new ToolTipPage();
     }
 }
