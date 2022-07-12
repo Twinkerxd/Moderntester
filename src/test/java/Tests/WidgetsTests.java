@@ -4,7 +4,17 @@ import Core.BaseSeleniumTests;
 import Pages.MainMenu;
 import Pages.Widgets.*;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.testng.annotations.DataProvider;
+
+import java.util.stream.Stream;
+
+import static org.bouncycastle.asn1.x500.style.RFC4519Style.name;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WidgetsTests extends BaseSeleniumTests {
     private AccordionPage accordionPage;
@@ -41,12 +51,9 @@ public class WidgetsTests extends BaseSeleniumTests {
         System.out.println(toolTipPage.getToolTipText());
     }
 
-    @Test
-    public void modalDialog() {
-        String name = "Serega";
-        String email = "example@gmail.com";
-        String password = "qweqwe";
-
+    @ParameterizedTest(name = "Modal dialog {index}")
+    @MethodSource("myDataProvider")
+    public void modalDialog(String name, String email, String password, int id) {
         ModalDialogPage modalDialogPage = new MainMenu()
                 .getWidgetsMenu()
                 .getModalDialogPage();
@@ -55,8 +62,15 @@ public class WidgetsTests extends BaseSeleniumTests {
         modalDialogPage.addLine(name,email,password);
         modalDialogPage.clickCreateAccountButton();
 
-        Assertions.assertEquals(name,modalDialogPage.getName(2));
-        Assertions.assertEquals(email,modalDialogPage.getEmail(2));
-        Assertions.assertEquals(password,modalDialogPage.getPassword(2));
+        assertEquals(name,modalDialogPage.getName(id));
+        assertEquals(email,modalDialogPage.getEmail(id));
+        assertEquals(password,modalDialogPage.getPassword(id));
+    }
+
+    private static Stream<Arguments> myDataProvider() {
+        return Stream.of(
+                Arguments.of("Serega", "example@gmail.com", "qweqwe", 2),
+                Arguments.of("AnotherName", "test@gmail.com", "wwwwwww", 2)
+        );
     }
 }

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added tooltip and datapicker tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/ModalDialogPage.java" afterDir="false" />
+    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added modal dialog test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Widgets/WidgetsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,72 +46,8 @@
       <recent name="C:\Junk\Projects\Moderntester\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WidgetsTests.modalDialog">
-    <configuration name="BasicTest.debug" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="debug" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BasicTest.promptAlertBoxAccept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="promptAlertBoxAccept" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BasicTest.promptAlertBoxDismiss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="promptAlertBoxDismiss" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BasicTest.simpleAlertPopUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.BasicTest" />
-      <option name="METHOD_NAME" value="simpleAlertPopUp" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WidgetsTests.modalDialog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WidgetsTests.modalDialog (1)">
+    <configuration name="WidgetsTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
         <pattern>
@@ -122,7 +57,70 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
-      <option name="METHOD_NAME" value="modalDialog" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests.debug (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="debug(java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests.debug" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="debug(java.lang.String,java.lang.String,java.lang.String,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests.modalDialog (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="modalDialog(java.lang.String,java.lang.String,java.lang.String,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests.sum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="sum(int,int,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WidgetsTests.modalDialog" />
-        <item itemvalue="JUnit.BasicTest.debug" />
-        <item itemvalue="JUnit.BasicTest.promptAlertBoxDismiss" />
-        <item itemvalue="JUnit.BasicTest.promptAlertBoxAccept" />
-        <item itemvalue="JUnit.BasicTest.simpleAlertPopUp" />
+        <item itemvalue="JUnit.WidgetsTests.modalDialog (1)" />
+        <item itemvalue="JUnit.WidgetsTests" />
+        <item itemvalue="JUnit.WidgetsTests.debug" />
+        <item itemvalue="JUnit.WidgetsTests.debug (1)" />
+        <item itemvalue="JUnit.WidgetsTests.sum" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657278333907</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added modal dialog test">
+      <created>1657610770666</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657610770666</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +238,7 @@
     <MESSAGE value="Added new windows tests" />
     <MESSAGE value="Omg refactoring and added autocomplete test" />
     <MESSAGE value="Added tooltip and datapicker tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tooltip and datapicker tests" />
+    <MESSAGE value="Added modal dialog test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added modal dialog test" />
   </component>
 </project>
