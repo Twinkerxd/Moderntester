@@ -11,36 +11,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AlertsPage extends BaseSeleniumPage {
-    @FindBy(id = "simple-alert")
-    private WebElement simpleAlertButton;
-
-    @FindBy(id = "prompt-alert")
-    private WebElement promptAlertButton;
-
-    @FindBy(id = "confirm-alert")
-    private WebElement confirmPopUp;
-
-    @FindBy(id = "delayed-alert")
-    private WebElement delayedAlert;
-
-    @FindBy(id = "simple-alert-label")
-    private WebElement simpleAlertLabel;
-
-    @FindBy(id = "prompt-label")
-    private WebElement promptLabel;
-
-    @FindBy(id = "confirm-label")
-    private WebElement confirmLabel;
-
-    @FindBy(id = "delayed-alert-label")
-    private WebElement delayedAlertLabel;
+    @FindBy(id = "simple-alert") private WebElement simpleAlertButton;
+    @FindBy(id = "prompt-alert") private WebElement promptAlertButton;
+    @FindBy(id = "confirm-alert") private WebElement confirmPopUp;
+    @FindBy(id = "delayed-alert") private WebElement delayedAlert;
+    @FindBy(id = "simple-alert-label") private WebElement simpleAlertLabel;
+    @FindBy(id = "prompt-label") private WebElement promptLabel;
+    @FindBy(id = "confirm-label") private WebElement confirmLabel;
+    @FindBy(id = "delayed-alert-label") private WebElement delayedAlertLabel;
 
     public AlertsPage() {
         PageFactory.initElements(driver,this);
     }
 
-    public void clickSimpleAlertButton() {
+    public AlertsPage clickSimpleAlertButton() {
         simpleAlertButton.click();
+        return this;
     }
 
     public void clickPromptAlertButton() {
@@ -74,5 +60,10 @@ public class AlertsPage extends BaseSeleniumPage {
     public Alert waitForAlertToBeReady() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
         return wait.until(ExpectedConditions.alertIsPresent());
+    }
+
+    public AlertsPage clickAcceptOnAlert() {
+        waitForAlertToBeReady().accept();
+        return this;
     }
 }

@@ -31,7 +31,7 @@ public class BasicMenu extends BaseSeleniumPage {
         return new FormPage();
     }
 
-    public AlertsPage getAlertsPage() {
+    public AlertsPage openAlertsPage() {
         alertsItem.click();
         return new AlertsPage();
     }

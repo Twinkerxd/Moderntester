@@ -2,7 +2,10 @@ package Tests;
 
 import Core.BaseSeleniumTests;
 import Pages.*;
-import Pages.Basic.*;
+import Pages.Basic.AlertsPage;
+import Pages.Basic.FormPage;
+import Pages.Basic.TablePage;
+import Pages.Basic.WindowsPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +14,10 @@ import static Pages.Basic.IframePage.Frames.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BasicTests extends BaseSeleniumTests {
-    private TablePage tablePage;
-    private FormPage formPage;
-    private AlertsPage alertsPage;
-    private WindowsPage windowsPage;
+    private TablePage tablePage = new TablePage();
+    private FormPage formPage = new FormPage();
+    private AlertsPage alertsPage = new AlertsPage();
+    private WindowsPage windowsPage = new WindowsPage();
 
     @Test
     @DisplayName("iframes")
@@ -65,15 +68,19 @@ public class BasicTests extends BaseSeleniumTests {
 
     @Test
     public void simpleAlertPopUp() {
-        alertsPage = new MainPage().openBasicMenu().getAlertsPage();
-        alertsPage.clickSimpleAlertButton();
-        alertsPage.waitForAlertToBeReady().accept();
-        assertEquals("OK button pressed", alertsPage.getSimpleAlertLabel());
+        String actualResult = new MainPage()
+                .openBasicMenu()
+                .openAlertsPage()
+                .clickSimpleAlertButton()
+                .clickAcceptOnAlert()
+                .getSimpleAlertLabel();
+
+        assertEquals("OK button pressed", actualResult);
     }
 
     @Test
     public void promptAlertBoxAccept() {
-        alertsPage = new MainPage().openBasicMenu().getAlertsPage();
+        alertsPage = new MainPage().openBasicMenu().openAlertsPage();
         alertsPage.clickPromptAlertButton();
         alertsPage.waitForAlertToBeReady().sendKeys("Nothing");
         alertsPage.waitForAlertToBeReady().accept();
@@ -82,7 +89,7 @@ public class BasicTests extends BaseSeleniumTests {
 
     @Test
     public void promptAlertBoxDismiss() {
-        alertsPage = new MainPage().openBasicMenu().getAlertsPage();
+        alertsPage = new MainPage().openBasicMenu().openAlertsPage();
         alertsPage.clickPromptAlertButton();
         alertsPage.waitForAlertToBeReady().dismiss();
         assertEquals("User cancelled the prompt.",alertsPage.getPromptLabel());
@@ -90,7 +97,7 @@ public class BasicTests extends BaseSeleniumTests {
 
     @Test
     public void confirmPopUpAccept() {
-        alertsPage = new MainPage().openBasicMenu().getAlertsPage();
+        alertsPage = new MainPage().openBasicMenu().openAlertsPage();
         alertsPage.clickConfirmPopUpButton();
         alertsPage.waitForAlertToBeReady().accept();
         assertEquals("You pressed OK!",alertsPage.getConfirmLabel());
@@ -98,7 +105,7 @@ public class BasicTests extends BaseSeleniumTests {
 
     @Test
     public void confirmPopUpDismiss() {
-        alertsPage = new MainPage().openBasicMenu().getAlertsPage();
+        alertsPage = new MainPage().openBasicMenu().openAlertsPage();
         alertsPage.clickConfirmPopUpButton();
         alertsPage.waitForAlertToBeReady().dismiss();
         assertEquals("You pressed Cancel!",alertsPage.getConfirmLabel());
@@ -106,7 +113,7 @@ public class BasicTests extends BaseSeleniumTests {
 
     @Test
     public void delayedAlert() {
-        alertsPage = new MainPage().openBasicMenu().getAlertsPage();
+        alertsPage = new MainPage().openBasicMenu().openAlertsPage();
         alertsPage.clickDelayedAlert();
         alertsPage.waitForAlertToBeReady().accept();
         assertEquals("OK button pressed", alertsPage.getDelayedAlertLabel());
