@@ -3,10 +3,8 @@ package Tests;
 import Core.BaseSeleniumTests;
 import Pages.*;
 import Pages.Basic.AlertsPage;
-import Pages.Basic.FormPage;
 import Pages.Basic.TablePage;
 import Pages.Basic.WindowsPage;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static Pages.Basic.IframePage.Continents.*;
@@ -15,12 +13,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BasicTests extends BaseSeleniumTests {
     private TablePage tablePage = new TablePage();
-    private FormPage formPage = new FormPage();
     private AlertsPage alertsPage = new AlertsPage();
     private WindowsPage windowsPage = new WindowsPage();
 
     @Test
-    @DisplayName("iframes")
     public void iframe() {
         new MainPage()
                 .openBasicMenu()
@@ -39,8 +35,10 @@ public class BasicTests extends BaseSeleniumTests {
 
     @Test
     public void tables() {
-        tablePage = new MainPage().openBasicMenu().getTablePage();
-        tablePage.someMethod();
+        new MainPage()
+                .openBasicMenu()
+                .openTablePage()
+                .someMethod();
     }
 
     @Test

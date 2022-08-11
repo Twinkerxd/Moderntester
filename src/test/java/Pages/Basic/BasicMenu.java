@@ -21,7 +21,7 @@ public class BasicMenu extends BaseSeleniumPage {
         return new IframePage();
     }
 
-    public TablePage getTablePage() {
+    public TablePage openTablePage() {
         tableItem.click();
         return new TablePage();
     }

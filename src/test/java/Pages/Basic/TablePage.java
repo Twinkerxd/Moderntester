@@ -9,8 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class TablePage extends BaseSeleniumPage {
-    @FindBy(xpath = "//tbody/tr")
-    private List<WebElement> rowsList;
+    @FindBy(xpath = "//tbody/tr") private List<WebElement> rowsList;
 
     public TablePage() {
         PageFactory.initElements(driver,this);
