@@ -7,23 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MainMenu extends BaseSeleniumPage {
-    @FindBy(xpath = "//a[contains(text(),'Basic')]")
-    private WebElement basicItem;
+public class MainPage extends BaseSeleniumPage {
+    @FindBy(xpath = "//a[contains(text(),'Basic')]") private WebElement basicItem;
+    @FindBy(xpath = "//a[contains(text(),'Widgets')]") private WebElement widgetsItem;
 
-    @FindBy(xpath = "//a[contains(text(),'Widgets')]")
-    private WebElement widgetsItem;
-
-    public MainMenu() {
+    public MainPage() {
         PageFactory.initElements(driver,this);
     }
 
-    public BasicMenu getBasicMenu() {
+    public BasicMenu openBasicMenu() {
         mouseOver(basicItem);
         return new BasicMenu();
     }
 
-    public WidgetsMenu getWidgetsMenu() {
+    public WidgetsMenu openWidgetsMenu() {
         mouseOver(widgetsItem);
         return new WidgetsMenu();
     }

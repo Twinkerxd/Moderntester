@@ -6,26 +6,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasicMenu extends BaseSeleniumPage {
-    @FindBy(xpath = "//a[@id='iframes-item']")
-    private WebElement iframesItem;
-
-    @FindBy(xpath = "//a[@id='table-item']")
-    private WebElement tableItem;
-
-    @FindBy(xpath = "//a[@id='form-item']")
-    private WebElement formItem;
-
-    @FindBy(xpath = "//a[@id='alerts-item']")
-    private WebElement alertsItem;
-
-    @FindBy(xpath = "//a[@id='windows-tabs-item']")
-    private WebElement windowsItem;
+    @FindBy(xpath = "//a[@id='iframes-item']") private WebElement iframesItem;
+    @FindBy(xpath = "//a[@id='table-item']") private WebElement tableItem;
+    @FindBy(xpath = "//a[@id='form-item']") private WebElement formItem;
+    @FindBy(xpath = "//a[@id='alerts-item']") private WebElement alertsItem;
+    @FindBy(xpath = "//a[@id='windows-tabs-item']") private WebElement windowsItem;
 
     public BasicMenu() {
         PageFactory.initElements(driver,this);
     }
 
-    public IframePage getIframePage() {
+    public IframePage openIframePage() {
         iframesItem.click();
         return new IframePage();
     }
