@@ -3,12 +3,12 @@ package Tests;
 import Core.BaseSeleniumTests;
 import Pages.*;
 import Pages.Basic.*;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static Pages.Basic.IframePage.Continents.*;
 import static Pages.Basic.IframePage.Frames.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BasicTests extends BaseSeleniumTests {
     private TablePage tablePage;
@@ -41,22 +41,26 @@ public class BasicTests extends BaseSeleniumTests {
     }
 
     @Test
-    public void form() throws InterruptedException {
-        formPage = new MainPage().openBasicMenu().getFormPage();
-        formPage.setFirstName("Serega");
-        formPage.setLastName("Kekman");
-        formPage.setEmail("GrayFaceNoSpace@gmail.com");
-        formPage.setRandomSex();
-        formPage.setAge("30");
-        formPage.setRandomYearOfExperience();
-        formPage.setRandomProfessions();
-        formPage.setRandomContinentsSelect();
-        formPage.setSeleniumCommandsSelector();
-        formPage.uploadFile("src/Kappa.txt");
-        formPage.setAdditionalInformations("You touch my tralala");
-        formPage.clickSignInButton();
-        Assertions.assertEquals("Form send with success",formPage.getValidatorMessage());
-        Thread.sleep(2000);
+    public void form() {
+        String actualResult = new MainPage()
+                .openBasicMenu()
+                .openFormPage()
+                .setFirstName("Serega")
+                .setLastName("Kekman")
+                .setEmail("GrayFaceNoSpace@gmail.com")
+                .setRandomSex()
+                .setAge(30)
+                .setRandomYearOfExperience()
+                .setRandomProfessions()
+                .setRandomContinentsSelect()
+                .setSeleniumCommandsSelector()
+                .uploadFile("src/Kappa.txt")
+                .setAdditionalInformations("You touch my tralala")
+                .clickSignInButton()
+                .getValidatorMessage();
+
+        assertEquals("Form send with success", actualResult);
+
     }
 
     @Test
@@ -64,7 +68,7 @@ public class BasicTests extends BaseSeleniumTests {
         alertsPage = new MainPage().openBasicMenu().getAlertsPage();
         alertsPage.clickSimpleAlertButton();
         alertsPage.waitForAlertToBeReady().accept();
-        Assertions.assertEquals("OK button pressed", alertsPage.getSimpleAlertLabel());
+        assertEquals("OK button pressed", alertsPage.getSimpleAlertLabel());
     }
 
     @Test
@@ -73,7 +77,7 @@ public class BasicTests extends BaseSeleniumTests {
         alertsPage.clickPromptAlertButton();
         alertsPage.waitForAlertToBeReady().sendKeys("Nothing");
         alertsPage.waitForAlertToBeReady().accept();
-        Assertions.assertEquals("Hello Nothing! How are you today?",alertsPage.getPromptLabel());
+        assertEquals("Hello Nothing! How are you today?",alertsPage.getPromptLabel());
     }
 
     @Test
@@ -81,7 +85,7 @@ public class BasicTests extends BaseSeleniumTests {
         alertsPage = new MainPage().openBasicMenu().getAlertsPage();
         alertsPage.clickPromptAlertButton();
         alertsPage.waitForAlertToBeReady().dismiss();
-        Assertions.assertEquals("User cancelled the prompt.",alertsPage.getPromptLabel());
+        assertEquals("User cancelled the prompt.",alertsPage.getPromptLabel());
     }
 
     @Test
@@ -89,7 +93,7 @@ public class BasicTests extends BaseSeleniumTests {
         alertsPage = new MainPage().openBasicMenu().getAlertsPage();
         alertsPage.clickConfirmPopUpButton();
         alertsPage.waitForAlertToBeReady().accept();
-        Assertions.assertEquals("You pressed OK!",alertsPage.getConfirmLabel());
+        assertEquals("You pressed OK!",alertsPage.getConfirmLabel());
     }
 
     @Test
@@ -97,7 +101,7 @@ public class BasicTests extends BaseSeleniumTests {
         alertsPage = new MainPage().openBasicMenu().getAlertsPage();
         alertsPage.clickConfirmPopUpButton();
         alertsPage.waitForAlertToBeReady().dismiss();
-        Assertions.assertEquals("You pressed Cancel!",alertsPage.getConfirmLabel());
+        assertEquals("You pressed Cancel!",alertsPage.getConfirmLabel());
     }
 
     @Test
@@ -105,7 +109,7 @@ public class BasicTests extends BaseSeleniumTests {
         alertsPage = new MainPage().openBasicMenu().getAlertsPage();
         alertsPage.clickDelayedAlert();
         alertsPage.waitForAlertToBeReady().accept();
-        Assertions.assertEquals("OK button pressed", alertsPage.getDelayedAlertLabel());
+        assertEquals("OK button pressed", alertsPage.getDelayedAlertLabel());
     }
 
     @Test
@@ -113,7 +117,7 @@ public class BasicTests extends BaseSeleniumTests {
         windowsPage = new MainPage().openBasicMenu().getWindowsPage();
         windowsPage.clickWindowButton();
         windowsPage.switchToNewWindowOrTab();
-        Assertions.assertEquals("http://automation-practice.emilos.pl/",windowsPage.getCurrentUrl());
+        assertEquals("http://automation-practice.emilos.pl/",windowsPage.getCurrentUrl());
     }
 
     @Test
@@ -121,7 +125,7 @@ public class BasicTests extends BaseSeleniumTests {
         windowsPage = new MainPage().openBasicMenu().getWindowsPage();
         windowsPage.clickMessageButton();
         windowsPage.switchToNewWindowOrTab();
-        Assertions.assertEquals("Knowledge increases by sharing but not by saving. Please share this website " +
+        assertEquals("Knowledge increases by sharing but not by saving. Please share this website " +
                 "with your friends and in your organization.",windowsPage.getBody());
         System.out.println(windowsPage.getBody());
     }

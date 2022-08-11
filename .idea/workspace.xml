@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Added modal dialog test">
+    <list default="true" id="2c12edf1-ec67-48d6-8100-3100b2fd2bd9" name="Changes" comment="Iframe test refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kappa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kappa.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Basic/BasicMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/BasicMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Basic/IframePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/IframePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BasicTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WidgetsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Basic/FormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Basic/FormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BasicTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BasicTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
       <recent name="C:\Junk\Projects\Moderntester\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasicTests.iframe">
+  <component name="RunManager" selected="JUnit.BasicTests.form">
     <configuration name="BasicTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
@@ -62,6 +60,22 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.BasicTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicTests.form" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moderntester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.BasicTests" />
+      <option name="METHOD_NAME" value="form" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,22 +111,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WidgetsTests.debug" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Moderntester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
-      <option name="METHOD_NAME" value="debug(java.lang.String,java.lang.String,java.lang.String,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WidgetsTests.modalDialog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Moderntester" />
       <extension name="coverage">
@@ -131,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BasicTests.form" />
         <item itemvalue="JUnit.BasicTests.iframe" />
         <item itemvalue="JUnit.BasicTests" />
         <item itemvalue="JUnit.WidgetsTests.modalDialog (1)" />
         <item itemvalue="JUnit.WidgetsTests" />
-        <item itemvalue="JUnit.WidgetsTests.debug" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657610770666</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Iframe test refactor">
+      <created>1660222953861</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660222953861</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +247,7 @@
     <MESSAGE value="Omg refactoring and added autocomplete test" />
     <MESSAGE value="Added tooltip and datapicker tests" />
     <MESSAGE value="Added modal dialog test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added modal dialog test" />
+    <MESSAGE value="Iframe test refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iframe test refactor" />
   </component>
 </project>

@@ -26,7 +26,7 @@ public class BasicMenu extends BaseSeleniumPage {
         return new TablePage();
     }
 
-    public FormPage getFormPage() {
+    public FormPage openFormPage() {
         formItem.click();
         return new FormPage();
     }
